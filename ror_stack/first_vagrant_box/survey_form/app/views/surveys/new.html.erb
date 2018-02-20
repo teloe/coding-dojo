@@ -1,0 +1,29 @@
+<fieldset>
+  <legend>Survey Form</legend>
+  <form action="/surveys" method="post">
+    <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+    <p>Your Name <input type="text" name="name" value=""></p>
+    <p>Dojo Location
+      <select name="location">
+        <option>Burbank</option>
+        <option>DC</option>
+        <option>Mountain View</option>
+        <option>Seattle</option>
+        <option>Tulsa</option>
+      </select>
+    </p>
+    <p>Favorite Language
+      <select name="language">
+        <option>JavaScript</option>
+        <option>HTML</option>
+        <option>Python</option>
+        <option>ROR</option>
+        <option>CSS</option>
+      </select>
+    </p>
+    <p>Comment
+      <textarea name="comment"></textarea>
+    </p>
+    <input type="submit" value="Submit!">
+  </form>
+</fieldset>

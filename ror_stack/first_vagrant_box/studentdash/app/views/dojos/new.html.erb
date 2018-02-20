@@ -1,0 +1,14 @@
+<% if flash[:errors] %>
+	<p><%= flash[:errors] %></p>
+<% end %>
+
+<form action="/dojos" method="POST">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <p>Branch: <input type="text" name="dojo[branch]"></p>
+  <p>Street: <input type="text" name="dojo[street]"></p>
+  <p>City: <input type="text" name="dojo[city]"></p>
+  <p>State: <input type="text" name="dojo[state]"></p>
+  <input type="submit">
+</form>
+
+<%= link_to "New Dojo", new_dojo_path %>
