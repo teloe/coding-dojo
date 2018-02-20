@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Login/ Register</title>
+    <style>
+      label {
+        display: block;
+        width: 350px;
+        text-align: right;
+      }
+      fieldset, form {
+        display: inline-block;
+      }
+      li {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+      <div>
+        <ul>
+        {% for message in messages %}
+          <li class="errors">{{message}}</li>
+        {% endfor %}
+        </ul>
+      </div>
+    {% endif %}
+    {% endwith %}
+
+    <form action="/register" method="post">
+      <fieldset>
+        <legend>Register</legend>
+        <label>
+          First Name: <input type="text" name="first_name">
+        </label>
+        <label>
+          Last Name: <input type="text" name="last_name">
+        </label>
+        <label>
+          Email: <input type="email" name="email">
+        </label>
+        <label>
+          Password: <input type="password" name="password">
+        </label>
+        <label>
+          Confirm Password: <input type="password" name="passconf">
+        </label>
+        <input type="submit" value="Register!">
+      </fieldset>
+    </form>
+
+    <form action="/login" method="post">
+      <fieldset>
+        <legend>Login</legend>
+        <label>
+          Email: <input type="email" name="email">
+        </label>
+        <label>
+          Password: <input type="password" name="password">
+        </label>
+        <input type="submit" value="Login!">
+      </fieldset>
+    </form>
+
+  </body>
+</html>

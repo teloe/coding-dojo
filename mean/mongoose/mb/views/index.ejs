@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		* {
+			font-family: Arial, sans-serif;
+		}
+		input {
+			display: block;
+		}
+	</style>
+</head>
+<body>
+<h1>This is an awesome message board!</h1>
+<form action="/message/new" method="POST">
+	<input type="text" name="name" placeholder="Name">
+	<input type="text" name="message" placeholder="Message">
+	<input type="submit" value="Say some stuff">
+</form>
+
+<% for(var message in messages){ %>
+	<div>Name: <%= messages[message].name %></div>
+	<div>Message: <%= messages[message].message %></div>
+<% } %>
+</body>
+</html>

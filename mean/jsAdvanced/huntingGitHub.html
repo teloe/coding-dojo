@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+  <title></title>
+  <script>
+  $(document).ready(
+    function(){
+      $('button').click(function(){
+        $.get('https://api.github.com/users/teloe', displayName);
+      });
+    function displayName(data){
+        if (data.name){
+          $('body').append("<p>"+data.name+"</p>");
+        }
+      }
+    }
+  );
+  </script>
+</head>
+<body>
+<button>Click Me</button>
+</body>
+</html>

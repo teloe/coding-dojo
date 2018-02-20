@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Counter</title>
+</head>
+<body>
+	<div>
+		<h3>Counter</h3>
+		<p>
+			<%= counter %> times.
+		</p>
+	</div>
+
+	<form action="/by-two" method="POST">
+		<input type="submit" value="+2">
+	</form>
+
+	<form action="/reset" method="POST">
+		<input type="submit" value="Reset">
+	</form>
+</body>
+</html>

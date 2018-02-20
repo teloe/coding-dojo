@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Random Word Generator</title>
+    <style>
+      * {
+        font-family: "Comic Sans MS";
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Random Word Generator!</h1>
+    <h3>(attempt # {{ request.session.counter }})</h3>
+    <div>
+      {{ random_word }}
+    </div>
+    <br><br>
+    <a href="/random_word"><button>Create Random Word</button></a>
+  </body>
+</html>

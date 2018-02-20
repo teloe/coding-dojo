@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Deck of Cards</title>
+</head>
+<body>
+<h1>Deck of cards</h1>
+<script type="text/javascript">
+	class Deck {
+	constructor(){
+		this.deck = [];
+	}
+
+	createDeck(){
+		this.suit = ["Clubs", "Spades", "Diamonds", "Hearts"];
+		this.number = ["A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"];
+		for (var i = 0; i < this.suit; i++){
+			for (var j = 0; j < this.number; i++){
+				this.deck.push(this.number[j] + "of" + this.suit[i]);
+			}
+		}
+		console.log(this.deck);
+	}
+	
+	shuffleDeck() {
+  var m = this.deck.length, t, i;
+  while (m){
+  	i = Math.floor(Math.random() * m--);
+    t = this.deck[m];
+    this.deck[m] = this.deck[i];
+    this.deck[i] = t;
+  }
+  return this.deck;
+	}
+
+	resetDeck(){
+		this.createDeck();
+	}
+
+	deal(){
+		let card = this.deck[Math.floor(Math.random() * this.deck.length)];
+		this.deck.splice(card, 1);
+		return card;
+	}
+
+	showDeck(){
+		return this.deck;
+	}
+}
+
+class Player {
+	constructor(name){
+		this.name = name;
+		this.hand = [];
+	}
+
+	takeCard(deck){
+		this.hand.push(deck.deal());
+	}
+
+	discard(card){
+		this.hand.splice(name, 1);
+		return this;
+	}
+}
+
+let deck1 = new Deck();
+let player1 = new Player();
+deck1.createDeck();
+deck1.shuffleDeck();
+
+player1.takeCard(deck1);
+player1.takeCard(deck1);
+player1.hand;
+console.log(deck1.deck);
+
+</script>
+</body>
+</html>

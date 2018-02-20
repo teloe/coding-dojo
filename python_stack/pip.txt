@@ -1,0 +1,4 @@
+Pip Assignment: 
+Documentation for pip found at https://pip.pypa.io/en/stable/ was helpful. This showed me what
+pip list meant: List installed packages, including editables. Pip freeze:
+Output installed packages in requirements format.

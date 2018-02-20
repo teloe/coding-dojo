@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<style type="text/css">
+		input {
+			display: block;
+		}
+		p {
+			color: red;
+		}
+	</style>
+</head>
+<body>
+	<% for (var key in errors){ %>
+		<p><%= errors[key].message %></p>
+	<% } %>
+	<h1>Chef Maker</h1>
+	<form action="/chefs" method="POST">
+		<input type="text" name="name" placeholder="Name">
+		<input type="submit" name="">
+	</form>
+	<h3>Here are all of the pizzas</h3>
+	<table>
+		<tr>
+			<td>Name</td>
+			<td>Cheese</td>
+			<td>Toppings</td>
+		</tr>
+		<% for (var i = 0; i < allPizzas.length; i++){ %>
+			<tr>
+				<td><%= allPizzas[i].name %></td>
+				<td><%= allPizzas[i].cheese %></td>
+				<td><%= allPizzas[i].toppings %></td>
+			</tr>
+		<% } %>
+	</table>
+</body>
+</html>

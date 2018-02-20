@@ -1,0 +1,16 @@
+function gamble(numberOfQuarters) {
+  var payOut;
+  var chance;
+  while(numberOfQuarters >= 0) {
+    chance = Math.floor(Math.random() * 100);
+    payOut = Math.floor(Math.random() * 51) + 50;
+
+    if(chance === 0) {
+      return payOut + numberOfQuarters;
+    }
+    numberOfQuarters--;
+  }
+  return 0;
+}
+
+console.log(gamble(10));

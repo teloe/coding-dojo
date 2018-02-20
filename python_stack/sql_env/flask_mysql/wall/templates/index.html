@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Log Reg</title>
+    <style>
+      * {
+        font-family: Arial, sans-serif;
+      }
+
+      form {
+        margin-top: 20px;
+        display: inline-block;
+      }
+
+      label {
+        display: block;
+        width: 400px;
+        text-align: right;
+      }
+
+      legend {
+        font-size: 20px;
+      }
+
+      input {
+        margin-top: 10px;
+      }
+      p {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+
+    {% with messages = get_flashed_messages() %}
+      {% if messages %}
+        {% for message in messages %}
+        <p>{{message}}</p>
+        {% endfor %}
+      {% endif %}
+    {% endwith %}
+
+    <form action="/register" method="post">
+      <fieldset>
+        <legend>REGISTER</legend>
+        <label>First Name
+          <input type="text" name="first_name">
+        </label>
+        <label>Last Name
+          <input type="text" name="last_name">
+        </label>
+        <label>Email
+          <input type="text" name="email">
+        </label>
+        <label>Password
+          <input type="text" name="password">
+        </label>
+        <label>Confirm Password
+          <input type="text" name="password_conf">
+        </label>
+        <input type="submit" name="register" value="REGISTER!">
+      </fieldset>
+    </form>
+
+    <form action="/login" method="post">
+      <fieldset>
+        <legend>LOGIN</legend>
+        <label>Email
+          <input type="text" name="email">
+        </label>
+        <label>Password
+          <input type="text" name="password">
+        </label>
+        <input type="submit" name="register" value="LOGIN!">
+      </fieldset>
+    </form>
+
+  </body>
+</html>

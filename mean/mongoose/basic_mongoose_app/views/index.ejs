@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		* {
+			font-family: 'Arimo', sans-serif;
+		}
+		input {
+			display: block;
+			margin-top: 5px;
+		}
+		.button {
+			background-color: gray;
+			color: white;
+		}
+		fieldset {
+			width: 300px;
+		}
+	</style>
+	<link href="https://fonts.googleapis.com/css?family=Arimo" rel="stylesheet">
+</head>
+<body>
+<h1>Hey there!</h1>
+<h4>Please complete the form below.</h4>
+<fieldset>
+	<legend>The Form</legend>
+	<form action="/users" method="POST">
+		<input type="text" name="name" placeholder="Name">
+		<input type="email" name="email" placeholder="Email">
+		<input class="button" type="submit" name="submit" value="ENTER!">
+	</form>
+</fieldset>
+</body>
+</html>

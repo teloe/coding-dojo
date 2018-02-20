@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Contact Card</title>
+
+      <script
+      src="https://code.jquery.com/jquery-3.2.1.js"
+      integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+      crossorigin="anonymous">
+      </script>
+
+      <script type="text/javascript">
+
+        $(document).ready(function() {
+
+          $('form').submit(function(){
+            var first = $('#first_name').val();
+            var last = $('#last_name').val();
+            var desc = $('textarea').val();
+
+          $("#contacts").append("<div class='card'><p>" + first + " " + last + "</p> <p>Click here</p> <p class='back'>" + desc +"</p></div>");
+
+          $("#first_name").val("");
+          $("#last_name").val("");
+          $("#desc").val("");
+
+          return false;
+        });
+
+        $(document).on('click', '.card', function() {
+          $(this).children().toggle();
+        });
+      });
+
+      </script>
+
+      <style>
+        *  {
+          font-family: Arial, sans-serif;
+          margin: 10px;
+        }
+
+      	label {
+      		display: block;
+      	}
+
+        .back {
+          display: none;
+        }
+
+      </style>
+
+    </head>
+    <body>
+      <div id="container">
+      	<div id="form">
+      		<form>
+      			<label>
+              First Name:
+      				<input id="first_name" type="text" name="first_name"/>
+      			</label>
+      			<label>
+      				Last Name:
+              <input id="last_name" type="text" name="last_name"/>
+      			</label>
+      			<label>
+      				Description:
+              <textarea id="desc" name="description"></textarea>
+      			</label>
+      			<button>Add User</button>
+      		</form>
+      	</div>
+
+        <div id="contacts">
+
+      	</div>
+      </div>
+
+    </body>
+</html>

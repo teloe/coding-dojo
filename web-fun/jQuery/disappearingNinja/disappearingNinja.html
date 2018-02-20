@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Disappearing Ninja</title>
+  <link rel="stylesheet" href="ninjaStyles.css">
+  <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+  <script type="text/javascript">
+    $(document).ready(function(){
+
+      $("img").click(function(){
+        $(this).hide("slow");
+      });
+
+      $("button").click(function(){
+  			$("img").show()
+  		});
+
+    });
+  </script>
+
+
+</head>
+<body>
+<h1>Assignment: Disappearing Ninja</h1>
+<img src="1.png" alt="Dojo Image">
+<img src="1.png" alt="Dojo Image">
+<img src="1.png" alt="Dojo Image">
+<img src="1.png" alt="Dojo Image">
+<img src="1.png" alt="Dojo Image">
+<img src="1.png" alt="Dojo Image">
+<img src="1.png" alt="Dojo Image">
+<img src="1.png" alt="Dojo Image">
+<button type="button" name="button">Restore</button>
+
+
+</body>
+</html>

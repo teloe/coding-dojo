@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Index</title>
+    <style media="screen">
+      * {
+        text-align: center;
+        font-family: sans-serif;
+      }
+      div {
+        background-color: gold;
+        display: inline-block;
+        height: 100px;
+        width: 100px;
+        margin-left: 10px;
+        padding: 5px;
+      }
+      p {
+        font-size: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Ninja Gold!</h1>
+    <h2>Your Gold: {{ session['count'] }}</h2>
+    <div class="farm">
+      <h3>FARM</h3>
+      <p>Earn 10 - 20 golds</p>
+    <form action="/process_money" method="post">
+      <input type="hidden" name="building" value="farm">
+      <input type="submit" name="Find Gold!">
+    </form>
+    </div>
+    <div class="cave">
+      <h3>CAVE</h3>
+      <p>Earn 5 - 10 golds</p>
+    <form action="/process_money" method="post">
+      <input type="hidden" name="building" value="cave">
+      <input type="submit" name="Find Gold!">
+    </form>
+    </div>
+    <div class="house">
+      <h3>HOUSE</h3>
+      <p>Earn 2 - 5 golds</p>
+    <form action="/process_money" method="post">
+      <input type="hidden" name="building" value="house">
+      <input type="submit" name="Find Gold!">
+    </form>
+    </div>
+    <div class="casino">
+      <h3>CASINO</h3>
+      <p>Earn 0 - 50 golds</p>
+    <form action="/process_money" method="post">
+      <input type="hidden" name="building" value="casino">
+      <input type="submit" name="Find Gold!">
+    </form>
+    </div>
+    <br><br>
+    <form action='/clear' method='POST'>
+        <button>RESET!</button>
+    </form>
+    <h5>Activities</h5>
+    {% for gold in building %}
+    <p>You earned {{ gold }} gold coins at the {{ building }}!</p>
+    {% endfor %}
+  </body>
+</html>

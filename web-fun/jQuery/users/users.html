@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Assignment: Users</title>
+  <link rel="stylesheet" href="users.css">
+
+  <!-- jQuery -->
+  <script
+  src="https://code.jquery.com/jquery-3.2.1.js"
+  integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+  crossorigin="anonymous"></script>
+  <script type="text/javascript">
+
+  $(document).ready(function() {
+
+	$('form').submit(function(){
+    return false;
+	  });
+  });
+
+  $(document).on('click', 'button, .add', function() {
+  	$firstName = $('#firstName').val();
+  	$lastName = $('#lastName').val();
+  	$email = $('#email').val();
+  	$number = $('#number').val();
+
+  $('table').append("<tr><td>"+$firstName+"</td>"+"<td>"+$lastName+"</td>"+"<td>"+$email+"</td>"+"<td>"+$number+"</td></tr>");
+  });
+
+  </script>
+</head>
+
+<body>
+
+  <h1>Assignment: Users</h1>
+
+  <table> <!-- TABLE -->
+    <thead>
+      <tr>
+        <td>First Name</td>
+        <td>Last Name</td>
+        <td>Email</td>
+        <td>Contact #</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <form> <!-- FORM -->
+    <h2>Add User</h2>
+    First name:
+    <input type="text" placeholder="First Name"id="firstName">
+    Last name:
+    <input type="text" placeholder="Last Name" id="lastName">
+    Email Address:
+    <input type="text" placeholder="Email"id="email">
+    Contact Number:
+    <input type="text" placeholder="Number" id="number">
+    <button type="submit" class="add">Add User</button>
+  </form>
+
+</body>
+</html>

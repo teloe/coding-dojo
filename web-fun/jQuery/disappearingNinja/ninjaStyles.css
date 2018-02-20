@@ -1,0 +1,16 @@
+* {
+  font-family: Arial, sans-serif;
+}
+
+img {
+  margin: 5px;
+}
+
+button {
+  display: block;
+  font-size: 20px;
+  width: 100px;
+  height: 50px;
+  background-color: #375099;
+  color: #fff;
+}

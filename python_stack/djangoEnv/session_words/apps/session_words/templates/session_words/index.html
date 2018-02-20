@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Session Words</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  </head>
+  <body>
+
+    <form action="/enter_info" method="post">
+      {% csrf_token %}
+      <fieldset>
+        <legend>Session Words</legend>
+        <label>Add a New Word
+          <input type="text" name="content">
+        </label>
+        <p>Choose Color</p>
+        <label><input type="radio" name="color" value="red">Red</label>
+        <label><input type="radio" name="color" value="green">Green</label>
+        <label><input type="radio" name="color" value="blue">Blue</label>
+        <br><br>
+        <label>Show In Big Font!
+          <input type="checkbox" name="show-big">
+        </label>
+        <br><br>
+        <input type="submit" value="Add To Session!">
+      </fieldset>
+    </form>
+    <br><br>
+
+    <div class="separator">
+      <a href="/clear"><button>Clear Session!</button></a>
+      {% if request.session.words %}
+        {% for word in request.session.words %}
+        <p>{{ word.content }}</p>
+        {% endfor %}
+      {% endif %}
+    </div>
+
+  </body>
+</html>
