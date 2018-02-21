@@ -1,0 +1,166 @@
+* {
+  /*border: dotted 1px red;*/
+}
+
+body {
+  max-width: 970px;
+  margin: auto;
+  font-family: Arial, sans-serif;
+}
+
+header {
+  margin-top: 40px;
+}
+
+header img {
+  margin: -25px 0;
+  position: absolute;
+  height: 80px;
+  width: 80px;
+}
+
+h1 {
+  width: 300px;
+  margin-left: 80px;
+  font-weight: 400;
+  margin-bottom: 0;
+}
+
+h2 {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-weight: 400;
+  padding: 20px 0 20px 20px;
+  color: #fff;
+  background: linear-gradient(#24669E, #5184AC, #24669E);
+}
+
+.side-bar {
+  width: 220px;
+  margin: 10px 0;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.reinvent {
+  margin-top: 15px;
+  background-image: url('images/ad_background.png');
+  padding: 5px;
+}
+
+.reinvent h3 {
+  text-align: center;
+  color: #fff;
+}
+
+.reinvent img {
+  width: 100%;
+}
+
+.reinvent button {
+  background-color: #3bc7de;
+  width: 98%;
+}
+
+button {
+  box-shadow: 1px 1px 1px #8D8E8D;
+  color: #fff;
+  font-size: 14px;
+  width: 200px;
+  padding: 5px;
+  margin: 2px;
+  border-radius: 5px;
+}
+
+.button1 {
+  background: linear-gradient(#6198C2, #23669E);
+}
+
+.button2 {
+  background: linear-gradient(#EAAC55, #F07400);
+}
+
+.main-content {
+  width: 600px;
+  display: inline-block;
+  margin-left: 20px;
+}
+
+.content-header {
+  width: 700px;
+  vertical-align: top;
+  border-bottom: solid 2px gray;
+}
+
+.content-header img {
+  height: 50px;
+  width: 50px;
+  margin-top: 0;
+  display: inline-block;
+}
+
+.dns {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.contact1 {
+  display: inline-block;
+  margin-left: 300px;
+}
+
+.contact {
+  display: inline-block;
+  width: 200px;
+}
+
+
+h5 {
+  font-size: 20px;
+  color: #005E9E;
+  display: inline-block;
+}
+
+.contact-txt {
+  display: inline-block;
+  margin: 0;
+  color: #313231;
+  font-size: 12px;
+}
+
+p {
+  display: inline;
+}
+
+#phone {
+  margin: 0;
+  font-weight: bold;
+  font-size: 30px;
+  color: #00BFDE;
+}
+
+#client {
+  height: 100px;
+  width: 50%;
+  margin-left: 150px;
+}
+
+.html-css-js {
+  margin-top: 15px;
+  border-top: solid 5px #0084df;
+  border-right: solid 5px #0084df;
+  border-left: solid 5px #0084df;
+  padding: 10px;
+}
+
+.html-css-js img {
+  width: 100px;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.html-css-js div {
+  display: inline-block;
+  width: 400px;
+  margin-left: 20px;
+}

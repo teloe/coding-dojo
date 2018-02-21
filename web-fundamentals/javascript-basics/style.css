@@ -1,0 +1,55 @@
+.main-container {
+  background-color: #1c3565;
+  padding: 2px 10px;
+}
+
+.header {
+  background-color: #d41c37;
+  border-radius: 10px;
+}
+
+h1 {
+  margin-left: 10px;
+  padding: 20px;
+}
+
+h1, h2, p {
+  color: lightblue;
+}
+
+p {
+  padding-left: 10px;
+  padding-right: 20px;
+}
+
+h2 {
+  padding-left: 10px;
+}
+
+nav {
+  background-color: teal;
+  border-radius: 10px;
+  float: left;
+}
+
+.main-content {
+  background-color: black;
+  border-radius: 10px;
+  margin-left: 280px;
+  padding: 2px;
+}
+
+strong {
+  color: rgb(110, 95, 232);
+}
+
+a {
+  color: turquoise;
+}
+
+.footer {
+  margin: 5px 0;
+  background-color: gray;
+  padding: 2px 0;
+  border-radius: 10px;
+}

@@ -1,1 +1,1 @@
-{"virtualbox":{"/vagrant":{"guestpath":"/vagrant","hostpath":"/Users/Tom/Desktop/coding-dojo/first_vagrant_box","disabled":false,"__vagrantfile":true}}}
+{"virtualbox":{"/vagrant":{"guestpath":"/vagrant","hostpath":"/Users/Tom/Desktop/coding-dojo/ror_stack/first_vagrant_box","disabled":false,"__vagrantfile":true}}}
